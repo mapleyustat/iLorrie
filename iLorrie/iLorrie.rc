@@ -1,0 +1,284 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\iLorrie.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\iLorrie.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 260, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 iLorrie"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,12,21,21
+    LTEXT           "此处显示版本信息",IDC_STATIC_VER,43,12,152,40,SS_NOPREFIX
+    DEFPUSHBUTTON   "确定",IDOK,203,7,50,16,WS_GROUP
+END
+
+IDD_ILORRIE_DIALOG DIALOGEX 0, 0, 472, 334
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "iLorrie"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_CMB_QUERY,16,34,87,48,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "编辑",IDC_BTN_EVENT,420,36,38,15,BS_FLAT
+    PUSHBUTTON      "编辑",IDC_BTN_FEEDBACK,420,134,38,15,BS_FLAT
+    PUSHBUTTON      "编辑",IDC_BTN_EFFECT,420,232,38,15,BS_FLAT
+    DEFPUSHBUTTON   "添加新记录",IDC_BTN_ADD,28,86,63,16,BS_CENTER
+    PUSHBUTTON      "删除记录",IDC_BTN_DEL,28,117,63,16,BS_CENTER
+    PUSHBUTTON      "统计信息",IDC_BTN_STATISTIC,28,148,63,16,BS_CENTER
+    PUSHBUTTON      "报表查看",IDC_BTN_REPORT,28,179,63,16,BS_CENTER
+    PUSHBUTTON      "关于iLorrie",IDC_BTN_ABOUT,28,208,63,16,BS_CENTER
+    PUSHBUTTON      "退出程序",IDCANCEL,28,300,63,16,BS_CENTER
+    GROUPBOX        "用户操作",IDC_STATIC,7,6,103,321,BS_CENTER
+    GROUPBOX        "记录信息",IDC_STATIC,116,6,347,321,BS_CENTER
+    LTEXT           "事件描述",IDC_STATIC,121,37,104,12,SS_CENTERIMAGE
+    LTEXT           "反应描述",IDC_STATIC,121,136,104,12,SS_CENTERIMAGE
+    LTEXT           "执行效果",IDC_STATIC,121,233,104,12,SS_CENTERIMAGE
+    LTEXT           "记录自身信息",IDC_STATIC_RECINFO,121,18,337,16,SS_CENTERIMAGE
+    CTEXT           "根据事件标题选择记录",IDC_STATIC,14,18,92,16,SS_CENTERIMAGE
+    CONTROL         "",IDC_EDIT_EVENT,"RichEdit20A",ES_MULTILINE | ES_READONLY | ES_WANTRETURN | WS_DISABLED | WS_BORDER | WS_TABSTOP,121,52,337,77
+    CONTROL         "",IDC_EDIT_FEEDBACK,"RichEdit20A",ES_MULTILINE | ES_READONLY | ES_WANTRETURN | WS_DISABLED | WS_BORDER | WS_TABSTOP,121,150,337,77
+    CONTROL         "",IDC_EDIT_EFFECT,"RichEdit20A",ES_MULTILINE | ES_READONLY | ES_WANTRETURN | WS_DISABLED | WS_BORDER | WS_TABSTOP,121,248,337,77
+END
+
+IDD_DLG_EVENT DIALOGEX 0, 0, 277, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "事件编辑对话框"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_TITLE,49,17,216,14,ES_MULTILINE | ES_AUTOHSCROLL
+    CONTROL         "",IDC_TMPK_DATE,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,49,39,56,14
+    CONTROL         "",IDC_TMPK_TIME,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,106,39,47,14
+    COMBOBOX        IDC_CMB_TYPE,210,39,55,48,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DETAIL,49,65,216,85,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,92,160,44,14
+    PUSHBUTTON      "取消",IDCANCEL,146,160,44,14
+    RTEXT           "标        题",IDC_STATIC,10,17,33,14,SS_CENTERIMAGE
+    RTEXT           "发生时间",IDC_STATIC,10,38,33,14,SS_CENTERIMAGE
+    RTEXT           "类        型",IDC_STATIC,171,39,33,14,SS_CENTERIMAGE
+    RTEXT           "详        情",IDC_STATIC,10,65,33,14,SS_CENTERIMAGE
+END
+
+IDD_DLG_FEEDBACK DIALOGEX 0, 0, 252, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "反馈编辑对话框"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,80,144,43,14
+    PUSHBUTTON      "取消",IDCANCEL,128,144,43,14
+    EDITTEXT        IDC_EDIT_DETAIL,54,80,178,59,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    RTEXT           "反馈主角",IDC_STATIC,15,14,33,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_ACTOR,54,14,81,33,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "反馈态度",IDC_STATIC,15,36,33,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_ATTITUDE,54,36,81,33,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "建议类型",IDC_STATIC,15,57,33,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_TYPE,54,57,81,33,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "建议详情",IDC_STATIC,15,78,33,12,SS_CENTERIMAGE
+END
+
+IDD_DLG_EFFECT DIALOGEX 0, 0, 259, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "执行效果编辑对话框"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,85,144,42,14
+    PUSHBUTTON      "取消",IDCANCEL,132,144,42,14
+    RTEXT           "执行主角",IDC_STATIC,15,14,33,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_ACTOR,55,14,81,33,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "执行效果",IDC_STATIC,16,38,33,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_LEVEL,55,37,81,33,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "执行详情",IDC_STATIC,16,62,33,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_DETAIL,55,62,185,77,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,9
+ PRODUCTVERSION 1,0,0,9
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "THE GRAPES"
+            VALUE "FileDescription", "主程序"
+            VALUE "FileVersion", "1.0.0.9"
+            VALUE "InternalName", "iLorrie.exe"
+            VALUE "LegalCopyright", "2012 (C) <THE GRAPES>。保留所有权利。"
+            VALUE "OriginalFilename", "iLorrie.exe"
+            VALUE "ProductVersion", "1.0.0.9"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_ILORRIE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 463
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 327
+    END
+
+    IDD_DLG_EVENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DLG_FEEDBACK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_DLG_EFFECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 iLorrie(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\iLorrie.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

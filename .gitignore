@@ -1,0 +1,9 @@
+ipch/
+Debug/
+
+*.sdf
+*.opensdf
+*.suo
+*.vcxproj.user
+*.dll
+*.exe
